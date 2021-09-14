@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import React, {useState, useEffect} from "react";
+import CoolNav from './components/navbar';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import { Row } from 'reactstrap'
+import PostCatalog from './Pages/Catalog';
+import CreatePost from './Pages/CreateProduct';
+import PostDetail from './Pages/PostDetail';
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+     <Router>
+       <CoolNav/>
+      <Row>
+        <Switch>
+          <Route path="/Home">
+             <PostCatalog/>
+          </Route>
+          <Route path="/CreatePost">
+             <CreatePost/>
+          </Route>
+          <Route path="/detail/:id">
+             <PostDetail/>
+          </Route>
+        </Switch>
+      </Row>
+    </Router>
+    </>
+  )
 }
+
 
 export default App;
