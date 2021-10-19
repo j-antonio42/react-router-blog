@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Col } from 'reactstrap';
+import {  useHistory } from 'react-router-dom'
 import PostForm from '../../components/ProductForm';
 import api from '../../Assets/lib/api';
 
 const CreatePost = (props) => {
 
     const [post, setPost] = useState({}) 
+    const history = useHistory()
 
     const inputHandler = event =>{
        const {name, value} = event.target
@@ -15,6 +16,7 @@ const CreatePost = (props) => {
     const buttonHandler = async() =>{
         console.log(post)
         api.makePost(post)
+        history.push('./')
     }
 
   return (

@@ -20,14 +20,14 @@ function App() {
        <CoolNav/>
       <Row>
         <Switch>
-          <Route path="/Home">
-             <PostCatalog/>
-          </Route>
           <Route path="/CreatePost">
              <CreatePost/>
           </Route>
           <Route path="/detail/:id">
              <PostDetail/>
+          </Route>
+          <Route path="/">
+             <PostCatalog/>
           </Route>
         </Switch>
       </Row>

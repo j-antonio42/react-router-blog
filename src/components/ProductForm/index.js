@@ -18,7 +18,7 @@ const PostForm = (props) => {
         </FormGroup>
         <FormGroup>
           <Label for="image">Image</Label>
-          <Input type="text" name="image"onChange={inputHandler}/>
+          <Input type="text" name="image"onChange={inputHandler} placeholder='Pega aqui la direccion de tu imagen'/>
         </FormGroup>
         <FormGroup>
           <Label for="content">Content</Label>
