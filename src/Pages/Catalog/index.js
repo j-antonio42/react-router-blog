@@ -20,18 +20,19 @@ const PostCatalog = (props) => {
       },[])
 
   return (
-      <Col xs='12'>
-          <h2>Pug Posts</h2>
-          <Row>{ Object.keys(posts).map((item) => {
-              return ( <ProductCard
-              postKey = {item}
-              cardData = {posts[item]} // se esta accediento al objeto posts con key 'item' 
-                />
-              )
-          })}
-              
-          </Row>
-      </Col>
+      <div className='container-fluid'>
+          <div className='container'>
+            <h2>Pug Posts</h2>
+            <Row>{ Object.keys(posts).map((item) => {
+                return ( <ProductCard
+                postKey = {item}
+                cardData = {posts[item]} // se esta accediento al objeto posts con key 'item' 
+                    />
+                )
+            })}    
+            </Row>
+          </div>  
+      </div>
     
   );
 };

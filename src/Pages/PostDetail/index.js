@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 import { useParams } from 'react-router';
 import api from '../../Assets/lib/api';
+import './styles.scss'
 
 const PostDetail = (props) => {
 
@@ -21,20 +22,23 @@ const PostDetail = (props) => {
 
 
   return (
-    <Col xs="12" className="position-relative">
-      <Card>
-        <CardBody>
-          <CardTitle tag="h5">{title}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">{name}</CardSubtitle>
-        </CardBody>
-        <img width="70%" src={image} alt="Card image cap" />
-        <CardBody>
-          <CardText>{content}</CardText>
-          <CardLink href="#">Card Link</CardLink>
-          <CardLink href="#">Another Link</CardLink>
-        </CardBody>
-      </Card>
-    </Col>
+    <div className='container-fluid'>
+      <div className="container post-detail">
+        <Card className='card-detail'>
+          <CardBody>
+            <CardTitle tag="h5">{title}</CardTitle>
+            <CardSubtitle tag="h6" className="mb-2 text-muted">{name}</CardSubtitle>
+          </CardBody>
+          <img width="100%" src={image} className="img-detail cap" />
+          <CardBody>
+            <CardText>{content}</CardText>
+            <CardLink href="#">Card Link</CardLink>
+            <CardLink href="#">Another Link</CardLink>
+          </CardBody>
+        </Card>
+      </div>
+    </div>
+    
   );
 };
 

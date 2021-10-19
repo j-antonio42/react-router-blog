@@ -18,13 +18,16 @@ const CreatePost = (props) => {
     }
 
   return (
-    <Col xs='12' md='6'>
-    <h2>Create a Post</h2>
-    <PostForm
-    inputHandler={inputHandler}
-    buttonHandler={buttonHandler}
-    />
-      </Col>
+    <div className='container-fluid'>
+       <div className='container'>
+          <h2>Create a Post</h2>
+          <PostForm
+          inputHandler={inputHandler}
+          buttonHandler={buttonHandler}
+          />
+      </div>
+    </div>
+   
       );
     }
     
