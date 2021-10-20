@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Card, CardImg, CardText, CardBody,
+  Card, CardImg, CardBody,
   CardTitle, CardSubtitle, Button, Col
 } from 'reactstrap';
 import './styles.scss'
@@ -9,7 +9,7 @@ import './styles.scss'
 const ProductCard = (props) => {
 
     const { postKey } = props
-    const {name, title, content, image} = props.cardData
+    const {name, title, image} = props.cardData
 
   return (
     <Col xs="12" md="4" key={postKey} className="mb-3">
@@ -18,7 +18,6 @@ const ProductCard = (props) => {
         <CardBody>
           <CardTitle tag="h5">{title}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">{name}</CardSubtitle>
-          <CardText>{content}</CardText>
           <Link to={`/detail/${postKey}`} >
             <Button>Detalle</Button>
           </Link>

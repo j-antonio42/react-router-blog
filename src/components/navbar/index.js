@@ -10,17 +10,18 @@ import {
 } from "react-router-dom";
 import './styles.scss'
 
+
 const CoolNav = (props) => {
   
 
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/Home">Pug blog</NavbarBrand>
+        <NavbarBrand href="/">Prana blog</NavbarBrand>
     
           <Nav className="mr-auto" navbar>
             <NavItem >
-              <Link to="/Home" className='nav-link'>Posts</Link>
+              <Link to="/" className='nav-link'>Posts</Link>
             </NavItem>
             <NavItem >
               <Link to="/CreatePost" className='nav-link'>Create Post</Link>

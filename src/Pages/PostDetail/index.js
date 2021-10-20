@@ -1,24 +1,46 @@
 import React,{ useState, useEffect } from 'react';
 import {
-  Card, CardText, CardBody, CardLink,
-  CardTitle, CardSubtitle, Col
+  Card, CardText, CardBody,
+  CardTitle, CardSubtitle, Button, Form, FormGroup, Label, Input, ListGroup, ListGroupItem,
 } from 'reactstrap';
 import { useParams } from 'react-router';
 import api from '../../Assets/lib/api';
+import { AiFillLike } from 'react-icons/ai'
 import './styles.scss'
 
 const PostDetail = (props) => {
 
   const [ postData, setPostData] = useState({})
-  const postId = useParams()
+  const [ comment, setComment] = useState('')
+  const postId = useParams().id
+
+  const {name, title, content, image, likes} = postData
 
   useEffect( async () =>{
-    let result = await api.getPostById(postId.id)
+    let result = await api.getPostById(postId)
     setPostData(result)
     //console.log(result)
   },[])
 
-  const {name, title, content, image} = postData
+  const likeHandler = async () => {
+    const newPost = {...postData}
+    newPost.likes = newPost.likes + 1
+    let result = await api.updatePost(newPost, postId)
+    setPostData(result)
+  }
+
+  const postComment = async () => {
+    const newPost = {...postData}
+    newPost.comments ? newPost.comments.push(comment) : newPost.comments = [comment]
+    let result = await api.updatePost(newPost,postId)        
+    setPostData(result)
+    setComment("")  
+  }
+
+  const commentHandler = event => {
+    const { value } = event.target
+    setComment( value )
+  }
 
 
   return (
@@ -29,12 +51,25 @@ const PostDetail = (props) => {
             <CardTitle tag="h5">{title}</CardTitle>
             <CardSubtitle tag="h6" className="mb-2 text-muted">{name}</CardSubtitle>
           </CardBody>
-          <img width="100%" src={image} className="img-detail cap" />
-          <CardBody>
+             <img width="100%" src={image} className="img-detail cap" />
+          <CardBody className='content-card'>
             <CardText>{content}</CardText>
-            <CardLink href="#">Card Link</CardLink>
-            <CardLink href="#">Another Link</CardLink>
+            <Button className='like-button' onClick={likeHandler}><AiFillLike/>{likes}</Button>
           </CardBody>
+          <ListGroup>
+            { postData.comments && 
+                postData.comments.map((item,index) => {
+                  return <ListGroupItem key={index}>{item}</ListGroupItem>
+                } )}
+          </ListGroup>
+          <Form className='card-form'>
+            <FormGroup>
+              <Label for="comments">Comments</Label>
+              <Input type="textarea" name="comments" onChange={commentHandler} />
+              <Button className='publish-button' onClick={postComment}> Publish </Button>
+            </FormGroup>
+          </Form>
+         
         </Card>
       </div>
     </div>

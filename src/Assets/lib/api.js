@@ -20,5 +20,16 @@ export default{
     async getPostById(id){
         let result = await fetch(`${URL}/${id}.json`)
         return await result.json()
-    }
+    },
+
+    async updatePost( someData, id ){
+        let result = await fetch(`${URL}/${id}/.json`,{
+            method:"PATCH",
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify( someData )
+        })
+        return await result.json()
+    },
 }

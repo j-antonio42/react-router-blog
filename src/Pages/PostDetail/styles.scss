@@ -4,6 +4,28 @@
     justify-content: center;
     .card-detail{
         width: 85%;
+        .content-card{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                margin-bottom: 0%;
+            }
+            .like-button{
+                border-radius: 7px;
+                border: none;
+                background-color: rgb(46, 45, 109);
+                color: white;
+                padding: .5rem .5rem;
+            }
+        }
+        .card-form{
+            padding: 16px;
+            .publish-button{
+                background-color: rgb(46, 45, 109);
+                margin-top: .5rem;
+            }
+        }
     }
 
 }

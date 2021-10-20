@@ -5,7 +5,7 @@ import api from '../../Assets/lib/api';
 
 const CreatePost = (props) => {
 
-    const [post, setPost] = useState({}) 
+    const [post, setPost] = useState({likes: 0, comments: []}) 
     const history = useHistory()
 
     const inputHandler = event =>{
@@ -14,9 +14,9 @@ const CreatePost = (props) => {
     }
 
     const buttonHandler = async() =>{
-        console.log(post)
-        api.makePost(post)
+        const result = await api.makePost(post)
         history.push('./')
+        window.location.reload()
     }
 
   return (
