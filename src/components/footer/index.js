@@ -45,7 +45,6 @@ const  Footer = ()=> {
 			 </div>
 
 			 <div className='contact'>
-				 <p>Contact</p>
 				 <p><RiWhatsappFill
 				 className='logo'/>311 263 11 05</p>
 				 <p><CgMail
