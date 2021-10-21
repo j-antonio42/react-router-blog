@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {  useHistory } from 'react-router-dom'
 import PostForm from '../../components/ProductForm';
 import api from '../../Assets/lib/api';
+import './styles.scss'
 
 const CreatePost = (props) => {
 
@@ -21,8 +22,8 @@ const CreatePost = (props) => {
 
   return (
     <div className='container-fluid'>
-       <div className='container'>
-          <h2>Create a Post</h2>
+       <div className='container post-creation'>
+          <h2 className='text-white'>Create a Post</h2>
           <PostForm
           inputHandler={inputHandler}
           buttonHandler={buttonHandler}

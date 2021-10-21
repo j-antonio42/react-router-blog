@@ -17,14 +17,11 @@ const CoolNav = (props) => {
   return (
     <div>
       <Navbar className='cool-nav' light expand="md">
-        <NavbarBrand href="/">Prana blog</NavbarBrand>
+        <NavbarBrand href="/">Dog Blog</NavbarBrand>
     
           <Nav className="mr-auto" navbar>
             <NavItem >
-              <Link to="/" className='nav-link'>Posts</Link>
-            </NavItem>
-            <NavItem >
-              <Link to="/CreatePost" className='nav-link'>Create Post</Link>
+              <Link to="/CreatePost" className='nav-link'>Create Dog Post</Link>
             </NavItem>
           </Nav>
           

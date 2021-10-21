@@ -10,6 +10,7 @@ import { Row } from 'reactstrap'
 import PostCatalog from './Pages/Catalog';
 import CreatePost from './Pages/CreateProduct';
 import PostDetail from './Pages/PostDetail';
+import Footer from './components/footer';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
      <Router>
-       <CoolNav/>
+       <CoolNav/>  
       <Row>
         <Switch>
           <Route path="/CreatePost">
@@ -31,6 +32,7 @@ function App() {
           </Route>
         </Switch>
       </Row>
+      <Footer/>
     </Router>
     </>
   )

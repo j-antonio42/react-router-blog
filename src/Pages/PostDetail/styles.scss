@@ -2,6 +2,8 @@
 .post-detail{
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
+   
     .card-detail{
         width: 85%;
         .content-card{
@@ -14,17 +16,31 @@
             .like-button{
                 border-radius: 7px;
                 border: none;
-                background-color: rgb(46, 45, 109);
+                background-color: rgb(238, 98, 122);
                 color: white;
                 padding: .5rem .5rem;
+                &:hover{
+                    background-color: rgb(238, 98, 122);
+                    opacity: .65;
+                }
             }
         }
         .card-form{
             padding: 16px;
             .publish-button{
-                background-color: rgb(46, 45, 109);
+                background-color: rgb(238, 98, 122);
+                border: none;
                 margin-top: .5rem;
+                &:hover{
+                    background-color: rgb(238, 98, 122);
+                    opacity: .65;
+                }
             }
+        }
+        .list-group{
+            padding-left: 16px;
+            padding-right: 16px;
+            
         }
     }
 

@@ -22,7 +22,7 @@ const PostCatalog = (props) => {
   return (
       <div className='container-fluid'>
           <div className='container'>
-            <h2>Posts</h2>
+            <h2 className='text-white'>Dog Posts</h2>
             <Row>{ Object.keys(posts).map((item) => {
                 return ( <ProductCard
                 postKey = {item}

@@ -1,7 +1,9 @@
 
 .card{
-    background-color: #7293A0;
+    background-color: #282422;
     color: white;
+    box-shadow: 3px 3px #515a6185;
+    
     .card-image{
         width: 100%;
         max-height: 172px;
@@ -13,9 +15,14 @@
             color: rgba(255, 255, 255, 0.74);
         }
         a{
-            .btn{
-                background-color: #159772;
+            .tongue{
+                background-color: rgb(238, 98, 122);
                 border: none;
+                &:hover{
+                    background-color: rgb(238, 98, 122);
+                    opacity: .65;
+                }
+            
             }
         }
     }

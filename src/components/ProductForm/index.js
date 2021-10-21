@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, Row} from 'reactstrap';
+import './styles.scss'
 
 const PostForm = (props) => {
 
     const {inputHandler, buttonHandler} = props
 
   return (
-    <div>
+    <div className='post-form'>
       <Form>
         <FormGroup>
           <Label>Title</Label>
@@ -25,7 +26,7 @@ const PostForm = (props) => {
           <Input type="textarea" name="content" onChange={inputHandler}/>
         </FormGroup>
       </Form>
-      <Button className="mt-3" color="success" onClick={buttonHandler} >Publish</Button>
+      <Button className="mt-3 tongue" onClick={buttonHandler} >Publish</Button>
     </div>
   )
 }

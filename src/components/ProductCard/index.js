@@ -19,7 +19,7 @@ const ProductCard = (props) => {
           <CardTitle tag="h5">{title}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 ">{name}</CardSubtitle>
           <Link to={`/detail/${postKey}`} >
-            <Button>Detalle</Button>
+            <Button className='tongue'>Detalle</Button>
           </Link>
         </CardBody>
       </Card>
