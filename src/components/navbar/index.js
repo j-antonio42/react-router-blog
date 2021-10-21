@@ -9,6 +9,7 @@ import {
   Link
 } from "react-router-dom";
 import './styles.scss'
+import {FaPaw} from 'react-icons/fa'
 
 
 const CoolNav = (props) => {
@@ -17,7 +18,8 @@ const CoolNav = (props) => {
   return (
     <div>
       <Navbar className='cool-nav' light expand="md">
-        <NavbarBrand href="/">Dog Blog</NavbarBrand>
+        <NavbarBrand href="/"><FaPaw
+			 className='logo mb-1'/> Dog Blog</NavbarBrand>
     
           <Nav className="mr-auto" navbar>
             <NavItem >

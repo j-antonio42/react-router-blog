@@ -4,9 +4,9 @@ footer{
     color: white;
 
     .custom-container{
-       max-width: 768px;
-       flex-direction: column;
-       justify-content: center;
+       max-width: 900px;
+       
+       justify-content: space-between;
        align-items: center;
        padding: 30px;
 
@@ -19,17 +19,45 @@ footer{
          :focus {
              color: chocolate;
          }
+         
      }
+     .social-networks{
+      display: flex;
+      justify-content: space-between;
+         .social-links{
+            text-decoration: none;
+            padding: .5rem;
+            color: white;
+               &:hover{
+                  color: chocolate;
+            } 
+               .logo{
+                  font-size: 1.4rem;
+                   
+               }
+            
+         }
 
-      .f-size{
-         text-align: center;
-         font-size: 90%;
-
-            span{
-               font-weight: bold;
-
-            }
       }
+
+      .contact{
+         p{
+            margin: .5rem;
+            .logo{
+               font-size: 1.4rem;
+            }
+         }
+      }
+
+   }
+}
+
+@media(max-width:576px){
+   .custom-container{
+   display: flex;
+   flex-direction: column;
+  
+   
    }
 }
 
