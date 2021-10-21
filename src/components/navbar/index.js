@@ -16,7 +16,7 @@ const CoolNav = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar className='cool-nav' light expand="md">
         <NavbarBrand href="/">Prana blog</NavbarBrand>
     
           <Nav className="mr-auto" navbar>

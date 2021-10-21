@@ -34,7 +34,7 @@ const PostDetail = (props) => {
     newPost.comments ? newPost.comments.push(comment) : newPost.comments = [comment]
     let result = await api.updatePost(newPost,postId)        
     setPostData(result)
-    setComment("")  
+    setComment('')  
   }
 
   const commentHandler = event => {
@@ -65,7 +65,7 @@ const PostDetail = (props) => {
           <Form className='card-form'>
             <FormGroup>
               <Label for="comments">Comments</Label>
-              <Input type="textarea" name="comments" onChange={commentHandler} />
+              <Input type="textarea" name="comments" onChange={commentHandler} value={comment} />
               <Button className='publish-button' onClick={postComment}> Publish </Button>
             </FormGroup>
           </Form>

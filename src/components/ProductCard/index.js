@@ -17,7 +17,7 @@ const ProductCard = (props) => {
         <CardImg top width="100%" src={image} className="card-image" />
         <CardBody>
           <CardTitle tag="h5">{title}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">{name}</CardSubtitle>
+          <CardSubtitle tag="h6" className="mb-2 ">{name}</CardSubtitle>
           <Link to={`/detail/${postKey}`} >
             <Button>Detalle</Button>
           </Link>

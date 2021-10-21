@@ -1,6 +1,23 @@
-.card-image{
-    width: 100%;
-    max-height: 172px;
-    object-fit: cover;
-    object-position: center;
+
+.card{
+    background-color: #7293A0;
+    color: white;
+    .card-image{
+        width: 100%;
+        max-height: 172px;
+        object-fit: cover;
+        object-position: center;
+    }
+    .card-body{
+        h6{
+            color: rgba(255, 255, 255, 0.74);
+        }
+        a{
+            .btn{
+                background-color: #159772;
+                border: none;
+            }
+        }
+    }
+
 }
