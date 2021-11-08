@@ -14,7 +14,7 @@ const PostDetail = (props) => {
   const [ comment, setComment] = useState('')
   const postId = useParams().id
 
-  const {name, title, content, image, likes} = postData
+  const {name, title, content, image, likes, imageUrl} = postData
 
   useEffect( async () =>{
     let result = await api.getPostById(postId)
@@ -51,7 +51,7 @@ const PostDetail = (props) => {
             <CardTitle tag="h5">{title}</CardTitle>
             <CardSubtitle tag="h6" className="mb-2 text-muted">{name}</CardSubtitle>
           </CardBody>
-             <img width="100%" src={image} className="img-detail cap" />
+             <img width="100%" src={image || imageUrl} className="img-detail cap" />
           <CardBody className='content-card'>
             <CardText>{content}</CardText>
             <Button className='like-button' onClick={likeHandler}><AiFillLike/>{likes}</Button>

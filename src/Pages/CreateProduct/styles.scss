@@ -3,3 +3,13 @@
 .post-creation{
     height: 73vh;
 }
+
+@media(max-width:576px){
+
+    .post-creation{
+       
+       height: auto;
+
+    }
+    
+ }

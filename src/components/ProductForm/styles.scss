@@ -3,14 +3,85 @@
 .post-form{
 
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #282422;
+    color: white;
+    border-radius: 10px;
+    
 
-
-    .tongue{
-        background-color: rgb(238, 98, 122);
-        border: none;
+    form{
+        width: 45%;
+        height: 340px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        padding: 1rem;
+      
+      
+        .tongue{
+            background-color: rgb(238, 98, 122);
+            border: none;
+        }
     
     }
 
+    .storage-container{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        .image-container{
+          display: flex;
+          flex-direction: column;
+          
+            
+            .image-preview{
+                border-radius: 10px;
+                width: 300px;
+                height: 256px;
+                object-fit: cover;
+                object-position: center;
+                margin-bottom: 1rem;
+            }
+        }
+        .image-div{
+            width: 100%;
+            .add-image{
+                width: 100%;
+                background-color: rgb(238, 98, 122);
+                border: none;
+                label{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
+@media(max-width:576px){
+   
+    .post-form{
+        margin-top: 5px;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 650px;
+        form{
+            width: 80%;
+           
+        }
+
+        .storage-container{
+            width: 80%;
+          
+        }
+    }
+
+    
+    
+ }
 
